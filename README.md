@@ -348,7 +348,7 @@ import java.sql.SQLException;
 public class InsertRecords {  
    
     private Connection connect() {  
-        String url = "jdbc:sqlite:C://sqlite/SSSIT.db";  
+        String url = "jdbc:sqlite:C://sqlite/Moives.db";  
         Connection conn = null;  
         try {  
             conn = DriverManager.getConnection(url);  
@@ -395,7 +395,7 @@ public class SelectRecords {
    
     private Connection connect() {  
         
-        String url = "jdbc:sqlite:C://sqlite/SSSIT.db";  
+        String url = "jdbc:sqlite:C://sqlite/Moives.db";  
         Connection conn = null;  
         try {  
             conn = DriverManager.getConnection(url);  
@@ -448,7 +448,7 @@ public class SelectRecords {
    
     private Connection connect() {  
         
-        String url = "jdbc:sqlite:C://sqlite/SSSIT.db";  
+        String url = "jdbc:sqlite:C://sqlite/Moives.db";  
         Connection conn = null;  
         try {  
             conn = DriverManager.getConnection(url);  
@@ -460,7 +460,7 @@ public class SelectRecords {
    
   
     public void selectAll(){  
-        String sql = "SELECT * FROM employees";  
+        String sql = "SELECT Moivename,acress,director,yearofrelease FROM Moives where moives.actorname=???";  
           
         try {  
             Connection conn = this.connect();  
@@ -468,7 +468,10 @@ public class SelectRecords {
             ResultSet rs    = stmt.executeQuery(sql);  
               
             while (rs.next()) {  
-                System.out.println(rs.  
+                System.out.println(rs.getString("Moivename")+ "\t" +   
+                                   rs.getString("actress")+"\t" +    
+                                   rs.getString("director")+ "\t" +   
+                                   rs.getDate("Yearofrelease")"\t" +    
                                  
                                             }  
         } catch (SQLException e) {  
