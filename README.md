@@ -359,7 +359,7 @@ public class InsertRecords {
     }  
    
   
-    public void insert(String name, double capacity) {  
+    public void insert(String Moivename, String actor,String actoress,String director,Date YearofRelease) {  
         String sql = "INSERT INTO Movies(Mivename,actor,actress,director,yearofrelease) VALUES(?,?)";  
    
         try{  
@@ -407,7 +407,7 @@ public class SelectRecords {
    
   
     public void selectAll(){  
-        String sql = "SELECT * FROM employees";  
+        String sql = "SELECT * FROM Moives";  
           
         try {  
             Connection conn = this.connect();  
